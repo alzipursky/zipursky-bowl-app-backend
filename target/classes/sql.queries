@@ -1,1 +1,0 @@
-conference.select.count=select count(*) from conferences
