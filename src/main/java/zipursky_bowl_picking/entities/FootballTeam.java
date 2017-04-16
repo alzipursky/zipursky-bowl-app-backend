@@ -13,9 +13,10 @@ public class FootballTeam {
     private Record schoolRecord;
     private String conference;
 
-    public FootballTeam(String schoolName, String schoolNickname) {
+    public FootballTeam() {}
+
+    public FootballTeam(String schoolName) {
         this.schoolName = schoolName;
-        this.schoolNickname = schoolNickname;
     }
 
     public Integer getId() {

@@ -19,6 +19,9 @@ public class BowlGame {
     private String city;
     private String State;
     private String Site;
+    private FootballTeam winningTeam;
+
+    public BowlGame() {}
 
     public BowlGame(String bowlName, FootballTeam homeTeam, FootballTeam awayTeam, Boolean isSemiFinal, LocalDate gameDate, LocalTime gameTime) {
         this.bowlName = bowlName;
@@ -115,5 +118,13 @@ public class BowlGame {
 
     public void setSite(String site) {
         Site = site;
+    }
+
+    public FootballTeam getWinningTeam() {
+        return winningTeam;
+    }
+
+    public void setWinningTeam(FootballTeam winningTeam) {
+        this.winningTeam = winningTeam;
     }
 }
