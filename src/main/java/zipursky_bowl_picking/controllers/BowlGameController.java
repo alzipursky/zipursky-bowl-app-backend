@@ -1,6 +1,7 @@
 package zipursky_bowl_picking.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import zipursky_bowl_picking.entities.BowlGame;
@@ -19,8 +20,8 @@ public class BowlGameController {
     BowlGameService bowlGameService;
 
     @RequestMapping("/games")
-    public List<BowlGame> testResponse(){
-        return bowlGameService.getBowlGames();
+    public ResponseEntity<List<BowlGame>> getBowlGames(){
+        return ResponseEntity.ok(bowlGameService.getBowlGames());
     }
 
 }

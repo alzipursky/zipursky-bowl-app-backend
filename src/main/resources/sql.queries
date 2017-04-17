@@ -1,3 +1,0 @@
-conference.select.count=select count(*) from conferences;
-
-bowl_games.select.all=select bowl_name, ft1.school_name as home_school_name, ft2.school_name as away_school_name, game_date, game_time from bowl_games join football_teams ft1 on bowl_games.home_team=ft1.id join football_teams ft2 on bowl_games.away_team=ft2.id;

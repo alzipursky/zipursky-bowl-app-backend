@@ -18,7 +18,7 @@ public class BowlGameRepositoryImpl implements BowlGameRepository{
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @Value("${bowl_games.select.all}")
+    @Value("${bowl_game.select.all}")
     private String selectBowlGames;
 
     @Override

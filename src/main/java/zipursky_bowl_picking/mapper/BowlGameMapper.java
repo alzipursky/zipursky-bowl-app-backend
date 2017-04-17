@@ -18,10 +18,18 @@ public class BowlGameMapper implements RowMapper<BowlGame>{
 
     public BowlGame mapRow(ResultSet rs, int rowNum) throws SQLException {
         BowlGame bowlGame = new BowlGame();
+        FootballTeam homeTeam = new FootballTeam();
+        FootballTeam awayTeam = new FootballTeam();
 
         bowlGame.setBowlName(rs.getString("bowl_name"));
-        bowlGame.setHomeTeam(new FootballTeam(rs.getString("home_school_name")));
-        bowlGame.setAwayTeam(new FootballTeam(rs.getString("away_school_name")));
+
+        homeTeam.setSchoolName(rs.getString("home_school_name"));
+        homeTeam.setSchoolNickname(rs.getString("home_school_nick_name"));
+        bowlGame.setHomeTeam(homeTeam);
+
+        awayTeam.setSchoolName(rs.getString("away_school_name"));
+        awayTeam.setSchoolNickname(rs.getString("away_school_nick_name"));
+        bowlGame.setAwayTeam(awayTeam);
 
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         dateFormatter = dateFormatter.withLocale(Locale.US);

@@ -6,11 +6,13 @@ package zipursky_bowl_picking.entities;
 public class Pick {
 
     private Integer id;
-    private Player player;
-    private BowlGame bowlGame;
-    private FootballTeam pickedTeam;
+    private String player;
+    private String bowlGame;
+    private String pickedTeam;
 
-    public Pick(Player player, BowlGame bowlGame, FootballTeam pickedTeam) {
+    public Pick(){}
+
+    public Pick(String player, String bowlGame, String pickedTeam) {
         this.player = player;
         this.bowlGame = bowlGame;
         this.pickedTeam = pickedTeam;
@@ -24,27 +26,27 @@ public class Pick {
         this.id = id;
     }
 
-    public Player getPlayer() {
+    public String getPlayer() {
         return player;
     }
 
-    public void setPlayer(Player player) {
+    public void setPlayer(String player) {
         this.player = player;
     }
 
-    public BowlGame getBowlGame() {
+    public String getBowlGame() {
         return bowlGame;
     }
 
-    public void setBowlGame(BowlGame bowlGame) {
+    public void setBowlGame(String bowlGame) {
         this.bowlGame = bowlGame;
     }
 
-    public FootballTeam getPickedTeam() {
+    public String getPickedTeam() {
         return pickedTeam;
     }
 
-    public void setPickedTeam(FootballTeam pickedTeam) {
+    public void setPickedTeam(String pickedTeam) {
         this.pickedTeam = pickedTeam;
     }
 }

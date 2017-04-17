@@ -13,7 +13,7 @@ public class AppConfig {
     @Bean
     public static PropertySourcesPlaceholderConfigurer properties(){
         final PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        propertySourcesPlaceholderConfigurer.setLocation(new ClassPathResource("/sql.queries"));
+        propertySourcesPlaceholderConfigurer.setLocation(new ClassPathResource("/sql.properties"));
         return propertySourcesPlaceholderConfigurer;
     }
 }
